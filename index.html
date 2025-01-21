@@ -8,6 +8,45 @@ $(document).ready((function(){$("#motorcycle").append(' <img src="./motorcycle.g
 
         </script>
         <div style="z-index: 1000000000000;position: fixed;bottom: 10px;text-align: center;width: 200px;left:50%;margin-left: -100px;">  <h6 style="color: #fff;font-family: Arial, Helvetica, sans-serif;">Developed By <a href="https://abdallahweb.github.io/resume/" style="color: #fff;font-family: Arial, Helvetica, sans-serif;">Abdallah Fouad</a></h6></div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+document.onkeydown = function(e) {
+        if (e.ctrlKey && 
+            (e.keyCode === 67 || 
+             e.keyCode === 86 || 
+             e.keyCode === 85 || 
+             e.keyCode === 117)) {
+            return false;
+        } else {
+            return true;
+        }
+};
+$(document).keypress("u",function(e) {
+  if(e.ctrlKey)
+  {
+return false;
+}
+else
+{
+return true;
+}
+});
+
+document.addEventListener("contextmenu", function (e){
+    e.preventDefault();
+}, false);
+
+
+$(document).keydown(function (event) {
+    if (event.keyCode == 123) { // Prevent F12
+        return false;
+    } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I        
+        return false;
+    }
+});
+
+</script>
+
 
     </body>
 </html>
